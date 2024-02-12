@@ -1,0 +1,150 @@
+/*-------------------------------gridddddds*/
+.grid-container{
+    display: grid;
+    background-color: #581f00;
+}
+
+.pet-photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+img{
+    width: 400px;
+}
+
+/*-------------------------------Colors */
+
+  :root{
+    --orange: #c96100;
+    --hoverorange: #eab61c;
+    --nice-pink:#a9414a;
+    --dark-pink: #be4c15;
+
+  }
+
+
+  /*-------------------------------Typography */
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-pink);
+    padding: 20px;
+  }
+  
+  /*-------------------------------specific styling of Typography*/ 
+
+  h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+
+  h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 15px;
+  }
+
+
+  h3{
+    font-size: 20px;
+    font-weight: 350;
+    margin: 10pxpx;
+  }
+
+  /* Links */
+  a {
+    color: var(--nice-pink);
+    line-height: 2;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--hoverorange);
+    font-weight: bold;
+  }
+  
+  /*-------------------------------Header */
+  header {
+    background-color: var(--orange);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+  }
+  /*-------------------------------Footer */
+  footer {
+    background-color: var(--nice-pink);
+    color: white;
+    padding: 20px;
+  }
+
+  /*-------------------------------Example navigation styling */
+  .navbar {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: var(--hover-orange);
+  }
+
+
+  /*-------------------------------Lists for recipes*/
+
+  ol {
+    counter-reset: item;
+    list-style: none;
+  }
+  
+  ol li {
+    counter-increment: item;
+    margin-bottom: 10px; 
+  }
+  
+  ol li:before {
+    content: counter(item) ".";
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  /*-------------------------------hidden skip to main content feature*/
+
+  /*hide the skip link*/
+.skip-link {
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: 0.3s;
+    display:none
+  }
+  
+
+/* focused, this is the accessible version */
+.skip-link:focus {
+    transform: translateY(0%);
+    display:initial
+}
